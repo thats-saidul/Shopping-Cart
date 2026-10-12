@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Shopping Cart</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+     
+    <header class="header">
+        <h1>TechNest</h1>
+        <p>Your destination for everyday technology.</p>
+    </header>
+
+    <main class="container">
+
+         <!-- Product Section -->
+    <section class="product-section">
+        <h2>Available Products</h2>
+
+        <div id="product-list" class="product-grid"></div>
+    </section>
+
+    <div class="checkout-layout">
+
+    <section class="cart-section">
+        <h2>Shopping Cart</h2>
+
+        <div id="cart-items"></div>
+
+        <h3>Total: ৳<span id="cart-total">0</span></h3>
+
+        <button id="checkout-btn" onclick="checkout()">
+            Proceed to Checkout
+        </button>
+    </section>
+
+    <!-- Customer Form -->
+    <section id="customer-form-section" hidden>
+        <h2>Customer Information</h2>
+
+        <label for="customer-name">Customer Name</label>
+        <input
+            type="text"
+            id="customer-name"
+            placeholder="Enter your name"
+        >
+
+        <label for="customer-phone">Phone Number</label>
+        <input
+            type="tel"
+            id="customer-phone"
+            placeholder="01XXXXXXXXX"
+            inputmode="numeric"
+            maxlength="11"
+        >
+
+        <button onclick="generatePaymentSlip()">
+            Confirm Details
+        </button>
+    </section>
+
+    <!-- Payment Slip -->
+    <section id="payment-slip" hidden>
+        <h2>Payment Slip</h2>
+
+        <div id="slip-details"></div>
+
+        <button id="print-slip-btn" onclick="printSlip()">
+            Print Payment Slip
+        </button>
+    </section>
+
+</div>
+
+
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
